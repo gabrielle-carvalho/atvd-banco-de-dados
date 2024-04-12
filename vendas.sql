@@ -8,16 +8,17 @@ quantidade int not null,
 dataVenda date
 );
 
+
 insert into vendas(produto, quantidade, dataVenda)
-values(&quot;Camiseta&quot;,10,&#39;2022-05-15&#39;),
-(&quot;Calca&quot;,5, &#39;2022-06-20&#39;),
-(&quot;Camiseta&quot;,8,&#39;2022-06-30&#39;),
-(&quot;Camiseta&quot;,6,&#39;2022-07-10&#39;),
-(&quot;Calca&quot;,4,&#39;2022-08-05&#39;);
+values("Camiseta",10,'2022-05-15'),
+("Calca",5, '2022-06-20'),
+("Camiseta",8,'2022-06-30'),
+("Camiseta",6,'2022-07-10'),
+("Calca",4,'2022-08-05');
 
-select * from vendas;
-drop database empresa;
-
+select * from vendas;     
+drop database empresa;           
+           
 select month (dataVenda) as mes, produto, sum(quantidade) as total_vendas
 from vendas
 group by mes, produto
