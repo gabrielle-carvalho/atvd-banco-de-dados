@@ -17,7 +17,8 @@ drop table pedidos;
 drop table clientes;
 drop database marisa;
 
+
 SELECT c.nome
 FROM clientes c
 INNER JOIN pedidos p ON c.id= p.clientes_id
-WHERE p.produto = &#39;camiseta&#39;;
+WHERE p.produto = 'camiseta';
